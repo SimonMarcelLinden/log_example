@@ -1,0 +1,73 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++.exe - Aktive Datei erstellen und debuggen",
+            "type": "cppdbg",
+            "request": "launch",
+            // "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}\\example-logger.exe", 
+            "includePath": [
+              "${workspaceFolder}\\**",
+              "${workspaceFolder}\\include\\**"
+            ],
+            "args": [
+              "--logfile",
+              "example-log.log",
+              "--debug"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\Development-Tools\\MinGW\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Disassemblierungsvariante auf Intel festlegen",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe Aktive Datei kompilieren"
+        },
+        {
+          "name": "g++ build & run active file",
+          "type": "cppdbg",
+          "request": "launch",
+          // "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+          "program": "${workspaceFolder}\\example-logger.exe", 
+          "includePath": [
+            "${workspaceFolder}\\**",
+            "${workspaceFolder}\\include\\**"
+          ],
+          "args": [
+            "--logfile",
+            "example-log.log",
+            "--debug"
+          ],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": false, //set to true to see output in cmd instead
+          "MIMode": "gdb",
+          "miDebuggerPath": "C:\\Development-Tools\\MinGW\\bin\\gdb.exe",
+          "setupCommands": [
+            {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+            }
+          ],
+          "preLaunchTask": "g++ build & run active file"
+        }
+    ]
+}

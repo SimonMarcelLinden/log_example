@@ -1,0 +1,46 @@
+{
+    "tasks": [
+        {
+            // "type": "cppbuild",
+            "type": "shell",
+            "label": "C/C++: g++.exe Aktive Datei kompilieren",
+            "command": "C:\\Development-Tools\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+				"${workspaceFolder}\\src\\*.cpp",
+				"${workspaceFolder}\\include\\*.hpp",
+                "-o",
+                // "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\example-logger.exe",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Vom Debugger generierte Aufgabe."
+        },
+        {
+            "type": "shell",
+            "label": "g++ build & run active file",
+            "command": "C:\\Development-Tools\\MinGW\\bin\\g++.exe",
+            "args": [
+              "${workspaceFolder}\\src\\*.cpp",
+              "${workspaceFolder}\\include\\*.hpp",
+              "-o",
+              // "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+              "${workspaceFolder}\\example-logger.exe",
+            ],
+            "options": {
+              "cwd": "C:\\Development-Tools\\MinGW\\bin\\"
+            }
+          }
+    ],
+    "version": "2.0.0"
+}
